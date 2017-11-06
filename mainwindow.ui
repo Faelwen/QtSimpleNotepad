@@ -65,57 +65,99 @@
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionNew">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/res/icons/Text Document.png</normaloff>:/res/icons/Text Document.png</iconset>
+   </property>
    <property name="text">
     <string>New</string>
    </property>
   </action>
   <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/res/icons/Open.png</normaloff>:/res/icons/Open.png</iconset>
+   </property>
    <property name="text">
     <string>Open</string>
    </property>
   </action>
   <action name="actionSave">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/res/icons/Save.png</normaloff>:/res/icons/Save.png</iconset>
+   </property>
    <property name="text">
     <string>Save</string>
    </property>
   </action>
   <action name="actionSave_as">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/res/icons/Hard Disk.png</normaloff>:/res/icons/Hard Disk.png</iconset>
+   </property>
    <property name="text">
     <string>Save as</string>
    </property>
   </action>
   <action name="actionExit">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/res/icons/Log Out.png</normaloff>:/res/icons/Log Out.png</iconset>
+   </property>
    <property name="text">
     <string>Exit</string>
    </property>
   </action>
   <action name="actionCut">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/res/icons/Cut.png</normaloff>:/res/icons/Cut.png</iconset>
+   </property>
    <property name="text">
     <string>Cut</string>
    </property>
   </action>
   <action name="actionCopy">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/res/icons/Copy v2.png</normaloff>:/res/icons/Copy v2.png</iconset>
+   </property>
    <property name="text">
     <string>Copy</string>
    </property>
   </action>
   <action name="actionPaste">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/res/icons/Paste.png</normaloff>:/res/icons/Paste.png</iconset>
+   </property>
    <property name="text">
     <string>Paste</string>
    </property>
   </action>
   <action name="actionUndo">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/res/icons/Undo.png</normaloff>:/res/icons/Undo.png</iconset>
+   </property>
    <property name="text">
     <string>Undo</string>
    </property>
   </action>
   <action name="actionRedo">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/res/icons/Redo.png</normaloff>:/res/icons/Redo.png</iconset>
+   </property>
    <property name="text">
     <string>Redo</string>
    </property>
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="ressource.qrc"/>
+ </resources>
  <connections/>
 </ui>

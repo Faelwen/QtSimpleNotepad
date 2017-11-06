@@ -1,2 +1,16 @@
-<!DOCTYPE RCC>
-<RCC version="1.0"/>
+<RCC>
+    <qresource prefix="/res">
+        <file>icons/Copy v2.png</file>
+        <file>icons/Cut.png</file>
+        <file>icons/Folder.png</file>
+        <file>icons/Hard Disk.png</file>
+        <file>icons/Information.png</file>
+        <file>icons/Log Out.png</file>
+        <file>icons/Open.png</file>
+        <file>icons/Paste.png</file>
+        <file>icons/Redo.png</file>
+        <file>icons/Save.png</file>
+        <file>icons/Text Document.png</file>
+        <file>icons/Undo.png</file>
+    </qresource>
+</RCC>
