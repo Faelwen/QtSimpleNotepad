@@ -56,12 +56,12 @@ void MainWindow::on_actionPaste_triggered()
 
 void MainWindow::on_actionUndo_triggered()
 {
-
+    ui->textEdit->undo();
 }
 
 void MainWindow::on_actionRedo_triggered()
 {
-
+    ui->textEdit->redo();
 }
 
 void MainWindow::on_actionAbout_triggered()
