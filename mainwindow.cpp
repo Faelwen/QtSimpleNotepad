@@ -1,5 +1,9 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QFile>
+#include <QFileDialog>
+#include <QTextStream>
+#include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -22,7 +26,16 @@ void MainWindow::on_actionNew_triggered()
 
 void MainWindow::on_actionOpen_triggered()
 {
-
+    QString file_name = QFileDialog::getOpenFileName(this, "Open file");
+    QFile file(file_name);
+    if(!file.open(QFile::ReadOnly | QFile::Text)) {
+        QMessageBox::warning(this, "..", "file not opened");
+        return;
+    }
+    QTextStream in(&file);
+    QString text = in.readAll();
+    ui->textEdit->setText(text);
+    file.close();
 }
 
 void MainWindow::on_actionSave_triggered()
