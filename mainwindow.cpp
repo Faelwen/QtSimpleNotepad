@@ -16,7 +16,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_actionNew_triggered()
 {
-
+    file_path = "";
+    ui->textEdit->setText("");
 }
 
 void MainWindow::on_actionOpen_triggered()
