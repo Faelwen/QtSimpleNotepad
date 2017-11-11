@@ -71,7 +71,7 @@ void MainWindow::on_actionSave_as_triggered()
 
 void MainWindow::on_actionExit_triggered()
 {
-
+    QCoreApplication::quit();
 }
 
 void MainWindow::on_actionCut_triggered()
@@ -101,5 +101,6 @@ void MainWindow::on_actionRedo_triggered()
 
 void MainWindow::on_actionAbout_triggered()
 {
-
+    QString about_text = "A simple Notepad application in Qt";
+    QMessageBox::about(this, about_text, "About");
 }
