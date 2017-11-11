@@ -28,6 +28,7 @@ void MainWindow::on_actionOpen_triggered()
 {
     QString file_name = QFileDialog::getOpenFileName(this, "Open file");
     QFile file(file_name);
+    file_path = file_name;
     if(!file.open(QFile::ReadOnly | QFile::Text)) {
         QMessageBox::warning(this, "..", "file not opened");
         return;
@@ -40,8 +41,7 @@ void MainWindow::on_actionOpen_triggered()
 
 void MainWindow::on_actionSave_triggered()
 {
-    QString file_name = QFileDialog::getSaveFileName(this, "Open file");
-    QFile file(file_name);
+    QFile file(file_path);
     if(!file.open(QFile::WriteOnly | QFile::Text)) {
         QMessageBox::warning(this, "..", "file not opened");
         return;
@@ -55,7 +55,17 @@ void MainWindow::on_actionSave_triggered()
 
 void MainWindow::on_actionSave_as_triggered()
 {
-
+    QString file_name = QFileDialog::getSaveFileName(this, "Open file");
+    QFile file(file_name);
+    if(!file.open(QFile::WriteOnly | QFile::Text)) {
+        QMessageBox::warning(this, "..", "file not opened");
+        return;
+    }
+    QTextStream out(&file);
+    QString text = ui->textEdit->toPlainText();
+    out << text;
+    file.flush();
+    file.close();
 }
 
 void MainWindow::on_actionExit_triggered()
