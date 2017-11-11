@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    this->centralWidget(ui->textEdit);
+    this->setCentralWidget(ui->textEdit);
 }
 
 MainWindow::~MainWindow()
@@ -40,7 +40,17 @@ void MainWindow::on_actionOpen_triggered()
 
 void MainWindow::on_actionSave_triggered()
 {
-
+    QString file_name = QFileDialog::getSaveFileName(this, "Open file");
+    QFile file(file_name);
+    if(!file.open(QFile::WriteOnly | QFile::Text)) {
+        QMessageBox::warning(this, "..", "file not opened");
+        return;
+    }
+    QTextStream out(&file);
+    QString text = ui->textEdit->toPlainText();
+    out << text;
+    file.flush();
+    file.close();
 }
 
 void MainWindow::on_actionSave_as_triggered()
